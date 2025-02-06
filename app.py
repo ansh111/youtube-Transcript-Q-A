@@ -20,7 +20,7 @@ load_dotenv()
 ## load the GROQ API Key
 os.environ['GROQ_API_KEY']=os.getenv("GROQ_API_KEY")
 
-groq_api_key=os.getenv("GROQ_API_KEY")
+groq_api_key=st.secrets["GROQ_API_KEY"]
 
 llm=ChatGroq(groq_api_key=groq_api_key,model_name="llama3-70b-8192")
 
